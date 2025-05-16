@@ -16,3 +16,5 @@ This project demonstrates how to use <a href="https://brightdata.com/products/sc
 <video src="https://github.com/user-attachments/assets/a2c6f3a1-9991-4278-bfbe-39d27b0ce8e4" controls style="max-width: 100%;"></video>
 
 
+## Examples
+1. [Booking Hotel Scraping Demo](hotel-scraping/README.md)
