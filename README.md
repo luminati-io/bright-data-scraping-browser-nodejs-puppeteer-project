@@ -17,4 +17,4 @@ This project demonstrates how to use <a href="https://brightdata.com/products/sc
 
 
 ## Examples
-1. [Booking Hotel Scraping Demo](hotel-scraping/README.md)
+1. [Booking.com Hotel Scraping Demo](hotel-scraping/README.md)
