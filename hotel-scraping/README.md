@@ -2,7 +2,7 @@
 
 This project demonstrates how to use Bright Data's Scraping Browser to search for hotels on Booking.com. It provides a practical example of web scraping with automated browser control.
 
-<a href="https://codesandbox.io/p/devbox/github/luminati-io/bright-data-scraping-browser-nodejs-project?file=%2Fbooking-hotel-scraping" target="_blank" rel="noopener">Open in CodeSandbox</a>, sign in with GitHub account, then fork the repository to begin making changes.
+<a href="https://codesandbox.io/p/devbox/github/luminati-io/bright-data-scraping-browser-nodejs-project?file=%2Fbooking-hotel-scraping.js" target="_blank" rel="noopener">Open in CodeSandbox</a>, sign in with GitHub account, then fork the repository to begin making changes.
 
 ### Getting Started
 
