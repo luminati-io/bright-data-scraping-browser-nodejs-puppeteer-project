@@ -4,7 +4,8 @@
     "tasks": {
       "install-dependencies": {
         "name": "Install Dependencies",
-        "command": "npm install"
+        "command": "npm install",
+        "runAtStart": true
       },
       "start-scraping": {
         "name": "Run Bright Data Scraping Browser",
