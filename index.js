@@ -8,9 +8,9 @@ import puppeteer from "puppeteer-core";
  * STEP 1: Configure your Bright Data scraping browser endpoint
  *  - Get endpoint from: https://brightdata.com/cp/zones
  *  - Create new scraping browser: https://docs.brightdata.com/scraping-automation/scraping-browser/quickstart
- *  - Endpoint format: wss://brd-customer-[id]-zone-[zone]:[password]@[domain]:[port]
+ *  - Websocket format: wss://brd-customer-[id]-zone-[zone]:[password]@[domain]:[port]
  */
-const BROWSER_WS_ENDPOINT = process.env.BRIGHT_DATA_SCRAPING_BROWSER_ENDPOINT || "YOUR_BRIGHT_DATA_SCRAPING_BROWSER_ENDPOINT";
+const BROWSER_WEBSOCKET_ENDPOINT = process.env.BRIGHT_DATA_SCRAPING_BROWSER_WEBSOCKET_ENDPOINT || "YOUR_BRIGHT_DATA_SCRAPING_BROWSER_WEBSOCKET_ENDPOINT";
 // STEP 2: Set your target URL
 const PAGE_URL = "https://example.com"; 
 
@@ -21,7 +21,7 @@ const PAGE_URL = "https://example.com";
     try {  
         console.log("🌐 Connecting to the Scraping Browser...");
         browser = await puppeteer.connect({  
-            browserWSEndpoint: BROWSER_WS_ENDPOINT,  
+            browserWSEndpoint: BROWSER_WEBSOCKET_ENDPOINT,  
         });
         console.log("✅ Successfully connected to the browser!");
 
