@@ -1,24 +1,15 @@
 
-# Bright Data Scraping Browser Node.js Project
+# Bright Data Scraping Browser Puppeteer Project
 
-This project demonstrates how to use Bright Data's Browser API for web scraping.
-
-## Open in CodeSandbox
+This project demonstrates how to use <a href="https://www.brightdata.com/scraping-browser" target="_blank">Bright Data Scraping Browser</a> to scrape data from websites using Node.js and Puppeteer.
 
 <a href="https://codesandbox.io/p/devbox/github/luminati-io/bright-data-scraping-browser-nodejs-project?file=%2Findex.js" target="_blank">
    Open in CodeSandbox
-</a>
+</a>, sign in with GitHub account, then fork the repository to begin making changes.
 
-## Using in CodeSandbox
+### Getting Started
 
-1. The project will automatically install dependencies when opened in CodeSandbox
-2. Create a `.env` file with your Bright Data credentials (see `.env.example`)
-3. Run the project using the "Run Bright Data Scraping Browser" task
-4. View the results in the console output
-
-## Local Development
-
-1. Clone this repository
-2. Run `npm install` to install dependencies
-3. Create a `.env` file with your Bright Data credentials
-4. Run `npm start` to execute the script
+1. Replace `YOUR_BRIGHT_DATA_SCRAPING_BROWSER_ENDPOINT` with your actual Bright Data scraping browser endpoint in `index.js`
+2. Replace `"https://example.com` with your target URL
+3. Run `npm install` to install dependencies
+4. Run `node index.js` to start scraping

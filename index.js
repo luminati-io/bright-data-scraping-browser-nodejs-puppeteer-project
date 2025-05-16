@@ -1,79 +1,49 @@
 /**
- * Example of using Bright Data's Browser API
- * This simple script demonstrates how to make a request to a website through Bright Data Browser API
+ * Example of using Bright Data scraping browser with Puppeteer
+ * This simple script demonstrates how to make a request to a website through Bright Data scraping Browser
  */
+import puppeteer from "puppeteer-core";
 
-// Load environment variables from .env file
-import 'dotenv/config';
+/**
+ * STEP 1: Configure your Bright Data scraping browser endpoint
+ *  - Get endpoint from: https://brightdata.com/cp/zones
+ *  - Create new scraping browser: https://docs.brightdata.com/scraping-automation/scraping-browser/quickstart
+ *  - Endpoint format: wss://brd-customer-[id]-zone-[zone]:[password]@[domain]:[port]
+ */
+const BROWSER_WS_ENDPOINT = process.env.BRIGHT_DATA_SCRAPING_BROWSER_ENDPOINT || "YOUR_BRIGHT_DATA_SCRAPING_BROWSER_ENDPOINT";
+// STEP 2: Set your target URL
+const PAGE_URL = "https://example.com"; 
 
-// Configuration - Update these values
-const CONFIG = {
-    // Step 1: Get your API token here: https://brightdata.com/cp/setting/users
-    apiToken: process.env.BRIGHT_DATA_API_TOKEN || 'YOUR_API_KEY', 
-    // Step 2: Get your zone here: https://brightdata.com/cp/zones 
-    zone: process.env.BRIGHT_DATA_ZONE || 'scraping_browser1', 
-    // Step 3: Set your target URL
-    targetUrl: 'https://geo.brdtest.com/welcome.txt'
-    // Step 4: Run `node index.js` commend on terminal
-  };
-  
-  /**
-   * Makes a request to the Bright Data API
-   * @returns {Promise} Promise that resolves with the API response
-   */
-  async function fetchWithBrightData() {
-    try {
-      // Input validation
-      if (CONFIG.apiToken === 'YOUR_API_TOKEN') {
-        console.warn('⚠️ Please set your actual API token before making requests');
-      }
-  
-      console.log(`🔄 Fetching ${CONFIG.targetUrl} through Bright Data Browser API...`);
-      
-      const response = await fetch('https://api.brightdata.com/request', {
-        method: 'POST',
-        headers: {
-          'Authorization': `Bearer ${CONFIG.apiToken}`,
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-          zone: CONFIG.zone,
-          url: CONFIG.targetUrl,
-          format: 'json'
-        })
-      });
-  
-      // Handle HTTP errors
-      if (!response.ok) {
-        throw new Error(`HTTP error! Status: ${response.status}`);
-      }
-  
-      const data = await response.json();
-      console.log('✅ Request successful!');
-      return data;
+// STEP 3: Run `node index.js` commend on terminal
+(async () => {  
+    console.log("🚀 Starting the scraping process...");
+    let browser;
+    try {  
+        console.log("🌐 Connecting to the Scraping Browser...");
+        browser = await puppeteer.connect({  
+            browserWSEndpoint: BROWSER_WS_ENDPOINT,  
+        });
+        console.log("✅ Successfully connected to the browser!");
+
+        const page = await browser.newPage();  
+        console.log("🌍 Navigating to the test URL...");
+        await page.goto(PAGE_URL, { timeout: 2 * 60 * 1000 });
+        console.log("📸 Taking a screenshot of the page...");
+        await page.screenshot({ path: './page.png', fullPage: true });
+        console.log("✅ Screenshot saved as 'page.png'!");
+
+        console.log("🔍 Scraping page content...");
+        const html = await page.content();  
+        console.log("📝 Page content retrieved:");
+        console.log(html);
     } catch (error) {
-      console.error('❌ Error:', error.message);
-      throw error; // Re-throw to allow further handling if needed
-    }
-  }
-  
-  // Execute the function and handle the response
-  fetchWithBrightData()
-    .then(data => {
-      console.log('📊 Response data:', data);
-    })
-    .catch(error => {
-      // Error already logged in the function
-      process.exit(1); // Exit with error code for scripts/automation
-    });
-  
-  /**
-   * How to use this script:
-   * 1. Get your API token from https://brightdata.com/cp/setting/users, more details https://docs.brightdata.com/general/account/api-token
-   * 2. Choose your zone from https://brightdata.com/cp/zones
-   * 3. Set your target URL
-   * 4. For better security, set environment variables:
-   *    - export BRIGHT_DATA_API_TOKEN=your_token_here
-   *    - export BRIGHT_DATA_ZONE=your_zone_here
-   * 5. Run the script with: node index.js
-   */
+        console.error("❌ An error occurred during scraping:");
+        console.error(error.message);
+        console.error(error.stack);
+    } finally {  
+        if (browser) {
+            await browser.close();
+            console.log("👋 Browser closed.");
+        }
+    }  
+})();
