@@ -16,5 +16,9 @@
     "url": "https://github.com/luminati-io/bright-data-browser-api-nodejs-project/issues"
   },
   "homepage": "https://github.com/luminati-io/bright-data-browser-api-nodejs-project#readme",
-  "description": ""
+  "description": "",
+  "type": "module",
+  "dependencies": {
+    "puppeteer-core": "^24.8.2"
+  }
 }
