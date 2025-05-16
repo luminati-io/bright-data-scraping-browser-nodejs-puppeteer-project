@@ -6,7 +6,7 @@ This project demonstrates how to use Bright Data's Scraping Browser to search fo
 
 ### Getting Started
 
-1. Replace `YOUR_BRIGHT_DATA_SCRAPING_BROWSER_ENDPOINT` with your actual Bright Data scraping browser webSocket endpoint in `booking-hotel-scraping`
+1. Replace `YOUR_BRIGHT_DATA_SCRAPING_BROWSER_ENDPOINT` with your actual Bright Data scraping browser webSocket endpoint in `booking-hotel-scraping.js`
 2. Run `node booking-hotel-scraping.js` to start scraping
 
 
