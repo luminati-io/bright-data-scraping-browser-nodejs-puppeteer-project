@@ -20,6 +20,7 @@
   "description": "",
   "type": "module",
   "dependencies": {
-    "puppeteer-core": "^24.8.2"
+    "puppeteer-core": "^24.8.2",
+    "dotenv": "^16.3.1"
   }
 }

@@ -3,6 +3,9 @@
  * This simple script demonstrates how to make a request to a website through Bright Data Browser API
  */
 
+// Load environment variables from .env file
+import 'dotenv/config';
+
 // Configuration - Update these values
 const CONFIG = {
     // Step 1: Get your API token here: https://brightdata.com/cp/setting/users

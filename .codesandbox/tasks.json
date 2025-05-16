@@ -7,6 +7,11 @@
         "command": "npm install",
         "runAtStart": true
       },
+      "setup-env": {
+        "name": "Setup Environment Variables",
+        "command": "[ -f .env ] || cp .env.example .env && echo '⚠️ Please update the .env file with your actual Bright Data credentials'",
+        "runAtStart": true
+      },
       "start-scraping": {
         "name": "Run Bright Data Scraping Browser",
         "command": "node index.js",
