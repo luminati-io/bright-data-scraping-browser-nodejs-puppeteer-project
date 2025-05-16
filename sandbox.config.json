@@ -1,0 +1,8 @@
+{
+  "template": "node",
+  "container": {
+    "node": "18"
+  },
+  "view": "browser",
+  "port": 3000
+}
