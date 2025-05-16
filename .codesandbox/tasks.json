@@ -1,0 +1,15 @@
+{
+    "$schema": "https://codesandbox.io/schemas/tasks.json",
+    "setupTasks": ["npm install"],
+    "tasks": {
+      "install-dependencies": {
+        "name": "Install Dependencies",
+        "command": "npm install"
+      },
+      "start-app": {
+        "name": "Run Bright Data Scraping Browser",
+        "command": "node index.js",
+        "runAtStart": false
+      }
+    }
+  }

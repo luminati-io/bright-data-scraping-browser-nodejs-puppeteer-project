@@ -1,0 +1,7 @@
+{
+    "title": "Bright Data Scraping Browser NodeJS Project",
+    "description": "This is my template",
+    "iconUrl": "https://example.com/icon.png",
+    "tags": ["node", "javascript", "puppeteer", "bright data"],
+    "published": false
+  }
