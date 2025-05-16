@@ -11,3 +11,8 @@ This project demonstrates how to use <a href="https://brightdata.com/products/sc
 2. Replace `"https://example.com` with your target URL
 3. Run `npm install` to install dependencies
 4. Run `node index.js` to start scraping
+
+## Demo
+<video src="https://github.com/user-attachments/assets/a2c6f3a1-9991-4278-bfbe-39d27b0ce8e4" controls style="max-width: 100%;"></video>
+
+
