@@ -6,7 +6,7 @@
         "name": "Install Dependencies",
         "command": "npm install"
       },
-      "start-app": {
+      "start-scraping": {
         "name": "Run Bright Data Scraping Browser",
         "command": "node index.js",
         "runAtStart": false
