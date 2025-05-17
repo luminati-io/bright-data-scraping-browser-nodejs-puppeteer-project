@@ -7,7 +7,7 @@ This project demonstrates how to use <a href="https://brightdata.com/products/sc
 
 ### Getting Started
 
-1. Replace `YOUR_BRIGHT_DATA_SCRAPING_BROWSER_ENDPOINT` with your actual Bright Data scraping browser endpoint in `index.js`
+1. Replace `YOUR_BRIGHT_DATA_SCRAPING_BROWSER_ENDPOINT` with your actual Bright Data scraping browser WebSocket endpoint in `index.js`
 2. Replace `"https://example.com` with your target URL
 3. Run `npm install` to install dependencies
 4. Run `node index.js` to start scraping
@@ -18,3 +18,4 @@ This project demonstrates how to use <a href="https://brightdata.com/products/sc
 
 ## Examples
 1. [Booking.com Hotel Scraping Demo](hotel-scraping/README.md)
+2. [Amazon Product Scraping Demo](ecommerce-scraping/README.md)
