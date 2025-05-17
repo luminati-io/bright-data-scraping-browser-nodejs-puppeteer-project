@@ -9,7 +9,7 @@ const AMAZON_URL = "https://www.amazon.com";
  *  - Create new scraping browser: https://docs.brightdata.com/scraping-automation/scraping-browser/quickstart
  *  - Websocket format: wss://brd-customer-[id]-zone-[zone]:[password]@[domain]:[port]
  */
-const BROWSER_WS = process.env.BRIGHT_DATA_SCRAPING_BROWSER_WEBSOCKET_ENDPOINT || "wss://brd-customer-hl_7abed23d-zone-scraping_browser3:auwjhl93hgkp@brd.superproxy.io:9222";
+const BROWSER_WS = process.env.BRIGHT_DATA_SCRAPING_BROWSER_WEBSOCKET_ENDPOINT || "YOUR_BRIGHT_DATA_SCRAPING_BROWSER_WEBSOCKET_ENDPOINT";
 
 // STEP 2: Run `node amazon-product-scraping.js` commend on terminal
 
