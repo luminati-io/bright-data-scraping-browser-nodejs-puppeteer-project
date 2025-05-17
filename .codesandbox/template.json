@@ -1,7 +1,7 @@
 {
-    "title": "Bright Data Scraping Browser NodeJS Project",
-    "description": "This is my template",
-    "iconUrl": "https://example.com/icon.png",
+    "title": "Bright Data Scraping Browser NodeJS Puppeteer Project",
+    "description": "This is Bright Data Scraping Browser NodeJS Puppeteer template",
+    "iconUrl": "https://user-images.githubusercontent.com/10379601/29446482-04f7036a-841f-11e7-9872-91d1fc2ea683.png",
     "tags": ["node", "javascript", "puppeteer", "bright data"],
     "published": false
   }
