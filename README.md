@@ -1,6 +1,8 @@
 
 # Bright Data Scraping Browser Puppeteer Project
 
+[![Bright Data Promo](https://github.com/luminati-io/LinkedIn-Scraper/raw/main/Proxies%20and%20scrapers%20GitHub%20bonus%20banner.png)](https://brightdata.com/)
+
 <a href="https://codesandbox.io/p/devbox/github/luminati-io/bright-data-scraping-browser-nodejs-project?file=%2Findex.js" target="_blank" rel="noopener">Open in CodeSandbox</a>, sign in with GitHub account, then fork the repository to begin making changes.
 
 This project demonstrates how to use <a href="https://brightdata.com/products/scraping-browser" target="_blank" rel="noopener">Bright Data Scraping Browser</a> to scrape data from websites using Node.js and Puppeteer.
